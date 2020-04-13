@@ -10,6 +10,7 @@ const Header = (props) => {
     <Container className={`pb80 ${moduleCss.header}`}>
       <Row>
         <Col>
+        <div>hello world</div>
           <header className={`flexStart flexAlinCenter flexBetween ${moduleCss.headerContainer}`}>
             <NavLink to={`/`}>
               <img src={props.logo} alt="" width='240' height='120' />
