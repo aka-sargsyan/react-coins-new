@@ -1,0 +1,63 @@
+.inform {
+  border-right: 1px solid #a58f78;
+  padding-right: 10px;
+}
+/* 
+.fotos {
+  grid-area: fotos;
+} */
+
+/* .gridContainer {
+  display: grid;
+  grid-template-areas: 'inform fotos';
+  /* grid-template-rows: auto 1fr; */
+  /* grid-template-columns: 7fr 5fr;
+  grid-gap: 10px;
+} */ 
+
+.header {
+  color: #a58f78;
+  font-family: "Avant Garde Bk BT";
+  font-size: calc(1px + 1.5vw);
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+.text {
+  color: #a58f78;
+  font-family: "Avant Garde Bk BT";
+  font-size: calc(1px + 1vw);
+  font-weight: 300;
+}
+
+.coinImg{
+  width: calc(67%);
+  height: calc(67%);
+}
+
+.coinImg img{
+  width: 100%;
+  height: auto;
+}
+
+.positionAbsolut{
+  position: absolute;
+}
+
+.positionRelative{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.topCoin{
+  top: 0;
+  right: 0;
+}
+
+.bottomCoin{
+  top: 44%;
+  right: 0;
+}
+

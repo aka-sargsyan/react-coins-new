@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 15px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.p10{
+  padding: 10px;
+}
+.pl5 {
+  padding-left: 5px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pb80 {
+  padding-bottom: 80px;
+}
+
+.pr5 {
+  padding-right: 5px;
+}
+
+.flexStart {
+  display: flex;
+}
+
+.flexAlinCenter {
+  align-items: center;
+}
+
+.flexCenter {
+  justify-content: center;
+}
+
+.flexBetween {
+  justify-content: space-between;
+}
+
+.flexEnd {
+  justify-content: flex-end;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+/* @media only screen and (max-width: 1024px) {
+  .App {
+    width: 100%;
+  }
+} */

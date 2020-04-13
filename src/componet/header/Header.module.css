@@ -1,0 +1,24 @@
+/* .header {
+  padding-bottom: 80px;
+} */
+
+.header a {
+  text-decoration: none;
+  color: #393c3d;
+}
+
+.header li {
+  font-family: "Avant Garde Bk BT";
+  font-size: 21px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+}
+
+a.active {
+  color: #a58f78;
+}

@@ -1,0 +1,84 @@
+.slideshow {
+  position: relative;
+  width: 100%;
+}
+
+.allImg {
+  width: calc(100% - (10% + 70px));
+  height: 100%;
+  margin-left: calc(10% + 70px);
+}
+
+.allImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.newProduct {
+  display: block;
+  width: calc((10% + 70px) * 2);
+  padding: 10px 0;
+  background-color: #a58f78;
+  position: absolute;
+  top: 17%;
+  z-index: 100;
+}
+
+.newProduct p {
+  color: white;
+  font-size: calc(1px + 1.5vw);
+  text-align: center;
+  font-family: "Avant Garde Bk BT";
+  padding: 0;
+  margin: 0;
+}
+
+.headerExplore {
+  display: block;
+  width: calc((10% + 70px) * 2 - (10% + 70px) / 2);
+  padding: 5px 0;
+  background-color: white;
+  position: absolute;
+  bottom: 24%;
+  left: calc((10% + 70px) / 2);
+  border: 1px solid #a58f78;
+  z-index: 100;
+}
+
+.headerExplore p {
+  font-size: calc(1px + 1.5vw);
+  text-align: center;
+  color: #a58f78;
+  margin-top: 12px;
+  font-family: "Avant Garde Bk BT";
+  padding: 0;
+  margin: 0;
+}
+
+.eachSlide{
+  height: 100%;
+}
+/* .slideContainer {
+  width: 70%;
+  margin: auto;
+} */
+
+/* .eachSlide>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+} */
+
+/* @media only screen and (max-width: 1024px) {
+  .allImg img {
+    width: 630px;
+    height: 350px;
+  }
+  .allImg {
+    width: 630px;
+    height: 350px;
+    margin-left: 150px;
+  }
+} */
