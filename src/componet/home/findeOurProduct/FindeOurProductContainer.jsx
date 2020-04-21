@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 class FindeOurProductContainer extends React.Component {
   render() {
     return (
-      <FindeOurProdutc />
+      // <FindeOurProdutc />
+      <div></div>
     )
   }
 }

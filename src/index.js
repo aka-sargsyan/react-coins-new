@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/redux-store'
 import 'bootstrap/dist/css/bootstrap.css';
+import 'leaflet/dist/leaflet.css'
 
 ReactDOM.render(
   <BrowserRouter>

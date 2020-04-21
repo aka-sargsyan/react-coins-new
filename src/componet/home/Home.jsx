@@ -3,7 +3,7 @@ import moduleCss from './Home.module.css'
 import Slideshow from '../slider/SlideShow';
 import TreavelCollectContainer from './travel&collect/TreavelCollectContainer';
 import PleacesArmeniaContainer from './pleacesArmenia/PleacesArmeniaContainer';
-import FindeOurProductContainer from './findeOurProduct/FindeOurProductContainer';
+import FindeOurProduct from './findeOurProduct/FindeOurProduct';
 
 const Home = (props) => {
 
@@ -20,7 +20,7 @@ const Home = (props) => {
         <PleacesArmeniaContainer />
       </div>
       <div>
-        <FindeOurProductContainer />
+        <FindeOurProduct />
       </div>      
     </div>
   )
