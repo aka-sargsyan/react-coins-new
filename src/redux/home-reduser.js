@@ -9,9 +9,13 @@ import pleaceFoto3 from '../assets/images/output-onlinejpgtools_(7).png';
 import pleaceFoto4 from '../assets/images/zvartnots.png';
 import pleaceFoto5 from '../assets/images/garni.png';
 import pleaceFoto6 from '../assets/images/garni.png';
+////////map pleace picture///////
+import terminalAdd1 from '../assets/images/DJI_0020.JPG'
+import terminalAdd2 from '../assets/images/garni.png'
 
 const DISPLAY_SHADOW = 'DISPLAY-SHADOW';
 const DISPLAY_SHADOW_CLOSE = 'DISPLAY-SHADOW-CLOSE';
+const PLEACE_PICTURE_INDEX = 'PLEACE-PICTURE-INDEX';
 
 let initialState = {
   newProduct: 'NEW PRODUCT FROM MATENADARAN',
@@ -53,8 +57,27 @@ let initialState = {
     displayShadowBool: true,
     index: null
   },
-  findeOurProdutc: {
-
+  findeOurProduct: {
+    positionCenter: {
+      lat: 40.171644,
+      lng: 44.519673,
+      zoom: 10,
+    },
+    positionsMarker: [
+      {
+        lat: 40.171644,
+        lng: 44.519673,
+        popup: 'tatevi vanq',
+        picture: terminalAdd1,
+      },
+      {
+        lat: 40.182844,
+        lng: 44.489860,
+        popup: 'patkerasrah',
+        picture: terminalAdd2,
+      }
+    ],
+    pictureIndex: 1,
   }
 }
 
@@ -70,6 +93,12 @@ let _closeShadow = (state) => {
   return copyStaet;
 }
 
+let _openPleacePicture = (state,action) =>{
+  let copyStaet = { ...state };
+  copyStaet.findeOurProduct = { ...state.findeOurProduct, pictureIndex:action};
+  return copyStaet;
+}
+
 const homeReduser = (state = initialState, action) => {
   switch (action.type) {
 
@@ -81,6 +110,10 @@ const homeReduser = (state = initialState, action) => {
       return _closeShadow(state)
     }
 
+    case PLEACE_PICTURE_INDEX: {
+      return _openPleacePicture(state,action.index)
+    }
+
     default:
       return state;
   }
@@ -88,5 +121,6 @@ const homeReduser = (state = initialState, action) => {
 
 export const displayShadow = (index) => ({ type: DISPLAY_SHADOW, index });
 export const displayShadowClose = () => ({ type: DISPLAY_SHADOW_CLOSE });
+export const pleacePictureIndex = (index) => ({ type: PLEACE_PICTURE_INDEX , index});
 
 export default homeReduser;

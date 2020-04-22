@@ -1,20 +1,21 @@
 import React from 'react';
-import FindeOurProdutc from './FindeOurProduct';
+import FindeOurProduct from './FindeOurProduct';
 import { connect } from 'react-redux';
+import {pleacePictureIndex} from '../../../redux/home-reduser'
 
 class FindeOurProductContainer extends React.Component {
+
   render() {
     return (
-      // <FindeOurProdutc />
-      <div></div>
+      <FindeOurProduct {...this.props}/>
     )
   }
 }
 
 let mapStateToProps = (state) => {
   return {
-
+    findeOurProduct: state.homePage.findeOurProduct
   }
 }
 
-export default connect(mapStateToProps, {})(FindeOurProductContainer)
+export default connect(mapStateToProps, {pleacePictureIndex})(FindeOurProductContainer)
