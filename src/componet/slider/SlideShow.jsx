@@ -11,31 +11,48 @@ const properties = {
   arrows: true,
 }
 
-const Slideshow = (props) => {
-  return (
-    <Container className={moduleCss.slideshow}>
-      <Row>
-        <Col>
-          <div className={moduleCss.newProduct}>
-            <p className="">NEW PRODUCT FROM MATENADARAN</p>
-          </div>
-          <div className={moduleCss.headerExplore}>
-            <p>Explore More</p>
-          </div>
-          <div className={`${moduleCss.allImg} ${moduleCss.slideContainer}`}>
-            <Slide  {...properties}>
-              {props.newProductImgs.map(picture =>
-                <div key={picture.id} className={moduleCss.eachSlide}>
-                  <img src={picture.productImg} />
-                </div>
+class Slideshow extends React.Component {
+  state = {
+    products: ['0', '1', '2','3'],
+    number: 0,
+  };
 
-              )}
-            </Slide>
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  )
+  cheangeNumber(number) {
+    console.log(number);
+    this.setState({
+      number: (number + 1) % this.state.products.length
+    })
+  }
+
+
+
+  render() {
+    return (
+      <Container className={moduleCss.slideshow}>
+        <Row>
+          <Col>
+            <div className={moduleCss.newProduct}>
+              <p className="">{this.state.products[this.state.number]}</p>
+            </div>
+            <div className={moduleCss.headerExplore}>
+              <p>Explore More</p>
+            </div>
+            <div className={`${moduleCss.allImg} ${moduleCss.slideContainer}`}>
+              <Slide  {...properties} onChange={(event) => this.cheangeNumber(event)}>
+                {this.props.newProductImgs.map((picture,index) =>
+                  <div key={picture.id} className={moduleCss.eachSlide} >
+                    <img src={picture.productImg} title={index}/>
+                  </div>
+
+                )}
+              </Slide>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+    )
+  }
 }
 
 

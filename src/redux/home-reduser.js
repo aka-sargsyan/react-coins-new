@@ -23,6 +23,7 @@ let initialState = {
     { id: 1_1, productImg: newProductImg1 },
     { id: 1_2, productImg: newProductImg2 },
     { id: 1_3, productImg: newProductImg3 },
+    { id: 1_4, productImg: pleaceFoto6 },
   ],
   treavelCollectInform: {
     header: 'TRAVEL AND COLLECT ARMENIAN COINS',
@@ -61,7 +62,7 @@ let initialState = {
     positionCenter: {
       lat: 40.171644,
       lng: 44.519673,
-      zoom: 10,
+      zoom: 25,
     },
     positionsMarker: [
       {
