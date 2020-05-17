@@ -58,6 +58,10 @@
 .eachSlide{
   height: 100%;
 }
+
+.textHoverNone:hover{
+  text-decoration: none;
+}
 /* .slideContainer {
   width: 70%;
   margin: auto;

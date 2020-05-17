@@ -16,15 +16,17 @@ import terminalAdd2 from '../assets/images/garni.png'
 const DISPLAY_SHADOW = 'DISPLAY-SHADOW';
 const DISPLAY_SHADOW_CLOSE = 'DISPLAY-SHADOW-CLOSE';
 const PLEACE_PICTURE_INDEX = 'PLEACE-PICTURE-INDEX';
+const EXPLORE_MORE = 'EXPLORE-MORE';
 
 let initialState = {
-  newProduct: 'NEW PRODUCT FROM MATENADARAN',
-  newProductImgs: [
-    { id: 1_1, productImg: newProductImg1 },
-    { id: 1_2, productImg: newProductImg2 },
-    { id: 1_3, productImg: newProductImg3 },
-    { id: 1_4, productImg: pleaceFoto6 },
+  // newProduct: 'NEW PRODUCT FROM MATENADARAN',
+  newProduct: [
+    { id: 1_1, productImg: newProductImg1, name: 'մատենադարան' },
+    { id: 1_2, productImg: newProductImg2, name: 'մատենադարան1' },
+    { id: 1_3, productImg: newProductImg3, name: 'մատենադարան2' },
+    { id: 1_4, productImg: pleaceFoto6, name: 'գառնի' },
   ],
+  slideNumber: 0,
   treavelCollectInform: {
     header: 'TRAVEL AND COLLECT ARMENIAN COINS',
     description: [
@@ -94,9 +96,9 @@ let _closeShadow = (state) => {
   return copyStaet;
 }
 
-let _openPleacePicture = (state,action) =>{
+let _openPleacePicture = (state, action) => {
   let copyStaet = { ...state };
-  copyStaet.findeOurProduct = { ...state.findeOurProduct, pictureIndex:action};
+  copyStaet.findeOurProduct = { ...state.findeOurProduct, pictureIndex: action };
   return copyStaet;
 }
 
@@ -112,7 +114,11 @@ const homeReduser = (state = initialState, action) => {
     }
 
     case PLEACE_PICTURE_INDEX: {
-      return _openPleacePicture(state,action.index)
+      return _openPleacePicture(state, action.index)
+    }
+
+    case EXPLORE_MORE: {
+      return {...state, slideNumber: action.number}
     }
 
     default:
@@ -122,6 +128,7 @@ const homeReduser = (state = initialState, action) => {
 
 export const displayShadow = (index) => ({ type: DISPLAY_SHADOW, index });
 export const displayShadowClose = () => ({ type: DISPLAY_SHADOW_CLOSE });
-export const pleacePictureIndex = (index) => ({ type: PLEACE_PICTURE_INDEX , index});
+export const pleacePictureIndex = (index) => ({ type: PLEACE_PICTURE_INDEX, index });
+export const exploreMoreNumber = (number) => ({ type: EXPLORE_MORE, number });
 
 export default homeReduser;

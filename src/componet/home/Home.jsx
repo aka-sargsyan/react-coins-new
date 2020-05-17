@@ -7,11 +7,10 @@ import FindeOurProductContainer from './findeOurProduct/FindeOurProductContainer
 
 const Home = (props) => {
 
-
   return (
     <div>
       <div className="pb80">
-        <Slideshow newProductImgs={props.newProductImgs} />
+        <Slideshow newProduct={props.newProduct} exploreMoreNumber={props.exploreMoreNumber}/>
       </div>
       <div className="pb80">
         <TreavelCollectContainer />
