@@ -1,10 +1,15 @@
 import React from 'react';
+import { Container, Col, Row } from 'reactstrap';
 
-const ExloreMore = (props) =>{
+const ExploreMore = (props) => {
   return (
-    <div>
-      hello world
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <img src={props.explorePage.productImg} alt="" />
+        </Col>
+      </Row>
+    </Container>
   )
 }
-export default ExloreMore;
+export default ExploreMore;
